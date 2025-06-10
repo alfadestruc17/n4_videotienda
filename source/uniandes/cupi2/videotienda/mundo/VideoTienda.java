@@ -52,7 +52,10 @@ public class VideoTienda
      */
     public VideoTienda( int unaTarifa )
     {
-    	//TODO implementar inicializando los atributos
+    	unaTarifa = tarifaDiaria;
+		clientes = new ArrayList<Cliente>( );
+		catalogo = new ArrayList<Pelicula>( );
+		
     }
 
     //-----------------------------------------------------------------
