@@ -36,6 +36,7 @@ public class Copia
      // -----------------------------------------------------------------
      public Copia( String laPelicula, int elCodigo) {
     	 
+    	 
      }
      
      // -----------------------------------------------------------------
@@ -60,9 +61,11 @@ public class Copia
      
      /**
       * Verifica si dos copias son iguales. Dos copias son iguales si tienen el mismo código y pertenecen a la misma película.
-      * 
+      * @return true si son iguales, false en caso contrario1
+      * @param otra Copia a comparar
       */
      public boolean esIgualA(Copia otra) {
-    	 
+    	 return codigo == otra.darCodigo() && 
+                 tituloPelicula.equals(otra.darTituloPelicula());
      }
 }
