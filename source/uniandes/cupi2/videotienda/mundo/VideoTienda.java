@@ -35,11 +35,13 @@ public class VideoTienda
     /**
      * Clientes
      */
+    private ArrayList clientes;
     //TODO declare el atributo
 
     /**
      * Cat�logo de pel�culas
      */
+    private ArrayList catalogo;
     //TODO declare el atributo
     
     //-----------------------------------------------------------------
