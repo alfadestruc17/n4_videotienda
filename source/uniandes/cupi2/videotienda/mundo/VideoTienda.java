@@ -193,11 +193,19 @@ public class VideoTienda
     	//TODO implementar
     }
 
-
+    /**
+     * 
+     */
+    public void modificarTarifa(int nuevaTarifa)
+    {
+		//TODO implementar
+	}
+    
     /**
      * Retorna la lista de clientes de la videotienda
      * @return ArrayList la lista de clientes
      */
+    
     //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
 
     /**
