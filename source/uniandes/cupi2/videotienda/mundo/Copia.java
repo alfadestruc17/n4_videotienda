@@ -34,9 +34,16 @@ public class Copia
      // -----------------------------------------------------------------
      // Constructores
      // -----------------------------------------------------------------
+     
+     /**
+	  * Crea una copia de la película con el título y código dados. <br>
+	  * post: La copia se crea con el título y código dados.
+	  * @param laPelicula Título de la película a la que pertenece la copia. laPelicula != null.
+	  * @param elCodigo Código de la copia. elCodigo > 0.
+	  */
      public Copia( String laPelicula, int elCodigo) {
-    	 
-    	 
+    	 tituloPelicula = laPelicula;
+         codigo = elCodigo; 
      }
      
      // -----------------------------------------------------------------
