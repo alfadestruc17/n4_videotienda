@@ -36,13 +36,11 @@ public class VideoTienda
      * Clientes
      */
     private ArrayList<Cliente> clientes;
-    //TODO declare el atributo
 
     /**
      * Catálogo de películas
      */
     private ArrayList<Pelicula> catalogo;
-    //TODO declare el atributo
     
     //-----------------------------------------------------------------
     // Constructores
