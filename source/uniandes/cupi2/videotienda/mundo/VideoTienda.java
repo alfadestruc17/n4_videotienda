@@ -73,7 +73,7 @@ public class VideoTienda
         int peliculas, copias;
         Pelicula pel;
 
-        //Limpia los datos iniciales de pel�culas
+        //Limpia los datos iniciales de películas
         catalogo.clear( );
 
         //Obtiene los datos
