@@ -214,9 +214,12 @@ public class VideoTienda
      * Retorna el cat�logo de pel�culas de la videotienda
      * @return lista de pel�culas existentes. lista != null.
      */
-    
-    //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
+    public ArrayList darCatalogo() 
+    {
+    	
 
+    //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
+    }
     //-----------------------------------------------------------------
     // Puntos de Extensi�n
     //-----------------------------------------------------------------
