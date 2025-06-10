@@ -135,7 +135,7 @@ public class VideoTienda
 
     /**
      * Busca una película por su título. <br>
-    */
+     */
     public Pelicula buscarPelicula( String titulo )
 	{
 		//TODO implementar
@@ -185,8 +185,13 @@ public class VideoTienda
 
     }
 
-
-
+    /**
+     * Agrega una copia de la película al catálogo de películas. <br>
+     */
+    public void agergarCopiaPelicula(String titulo)
+    {
+    	//TODO implementar
+    }
 
 
     /**
