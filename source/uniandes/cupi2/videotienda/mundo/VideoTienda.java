@@ -194,7 +194,7 @@ public class VideoTienda
     }
 
     /**
-     * 
+     * Modifica la tarifa diaria de alquiler de la videotienda. <br>
      */
     public void modificarTarifa(int nuevaTarifa)
     {
@@ -205,13 +205,16 @@ public class VideoTienda
      * Retorna la lista de clientes de la videotienda
      * @return ArrayList la lista de clientes
      */
-    
+    public ArrayList darListaClientes()
+	{
     //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
-
+	}
+    
     /**
      * Retorna el cat�logo de pel�culas de la videotienda
      * @return lista de pel�culas existentes. lista != null.
      */
+    
     //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
 
     //-----------------------------------------------------------------
