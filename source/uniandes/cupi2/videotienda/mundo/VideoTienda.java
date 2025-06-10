@@ -89,7 +89,7 @@ public class VideoTienda
 
             for( int i = 1; i <= peliculas; i++ )
             {
-                dato = "pelicula" + i + ".nombre";
+                dato = "película" + i + ".nombre";
                 //Carga una película
                 titulo = datos.getProperty( dato );
                 if( titulo == null )
@@ -97,7 +97,7 @@ public class VideoTienda
                     throw new Exception( "Falta definir la propiedad " + dato );
                 }
 
-                copias = Integer.parseInt( datos.getProperty( "pelicula" + i + ".copias" ) );
+                copias = Integer.parseInt( datos.getProperty( "película" + i + ".copias" ) );
                 pel = new Pelicula( titulo );
                 for( int j = 1; j <= copias; j++ )
                 {
@@ -109,7 +109,7 @@ public class VideoTienda
         }
         catch( Exception e )
         {
-            throw new Exception( "Error al cargar los datos almacenados de pel�culas" );
+            throw new Exception( "Error al cargar los datos almacenados de películas" );
         }
     }
 
