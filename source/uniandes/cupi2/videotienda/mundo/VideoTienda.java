@@ -134,8 +134,8 @@ public class VideoTienda
     }
 
     /**
-     * 
-     */
+     * Busca una película por su título. <br>
+    */
     public Pelicula buscarPelicula( String titulo )
 	{
 		//TODO implementar
