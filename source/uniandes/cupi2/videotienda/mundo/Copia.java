@@ -31,4 +31,38 @@ public class Copia
       */
      private int codigo;
      
+     // -----------------------------------------------------------------
+     // Constructores
+     // -----------------------------------------------------------------
+     public Copia( String laPelicula, int elCodigo) {
+    	 
+     }
+     
+     // -----------------------------------------------------------------
+     // Métodos
+     // -----------------------------------------------------------------
+     
+     /**
+	  * Retorna el código de la película a la que pertenece la copia
+	  * @return Código de la película
+	  */
+     public int darCodigo() {
+		 return codigo;
+	 }
+     
+     /**
+      * Retorna el título de la película a la que pertenece la copia
+      * @return Título de la película a la que pertenece la copia
+      */
+     public String darTituloPelicula() {
+    	 return tituloPelicula;
+     }
+     
+     /**
+      * Verifica si dos copias son iguales. Dos copias son iguales si tienen el mismo código y pertenecen a la misma película.
+      * 
+      */
+     public boolean esIgualA(Copia otra) {
+    	 
+     }
 }
