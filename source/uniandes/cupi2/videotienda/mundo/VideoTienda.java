@@ -1,8 +1,8 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
  * $Id: VideoTienda.java,v 1.1 2005/12/16 15:13:33 k-marcos Exp $
- * Universidad de los Andes (Bogot� - Colombia)
- * Departamento de Ingenier�a de Sistemas y Computaci�n 
+ * Universidad de los Andes (Bogotá - Colombia)
+ * Departamento de Ingeniería de Sistemas y Computación 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -39,7 +39,7 @@ public class VideoTienda
     //TODO declare el atributo
 
     /**
-     * Cat�logo de pel�culas
+     * Catálogo de películas
      */
     private ArrayList<Pelicula> catalogo;
     //TODO declare el atributo
@@ -49,7 +49,7 @@ public class VideoTienda
     //-----------------------------------------------------------------
 
     /**
-     * Crea una videotienda sin pel�culas registradas.
+     * Crea una videotienda sin películas registradas.
      * @param unaTarifa Tarifa diaria de alquiler. tarifa > 0.
      */
     public VideoTienda( int unaTarifa )
@@ -58,14 +58,14 @@ public class VideoTienda
     }
 
     //-----------------------------------------------------------------
-    // M�todos
+    // Métodos
     //-----------------------------------------------------------------
 
     /**
-     * Carga en memoria los datos del archivo de pel�culas. <br>
-     * <b>post: </b> Se almacenan los datos de las pel�culas del archivo en el cat�logo eliminando las pel�culas anteriiores. <br>
-     * @param archivo Nombre del archivo que contiene la informaci�n de las pel�culas.
-     * @throws Exception si hay datos inv�lidos en el archivo o no tiene el formato adecuado.
+     * Carga en memoria los datos del archivo de películas. <br>
+     * <b>post: </b> Se almacenan los datos de las películas del archivo en el catálogo eliminando las películas anteriiores. <br>
+     * @param archivo Nombre del archivo que contiene la información de las películas.
+     * @throws Exception si hay datos inválidos en el archivo o no tiene el formato adecuado.
      */
     public void cargarPeliculas( String archivo ) throws Exception
     {
@@ -83,13 +83,13 @@ public class VideoTienda
             FileInputStream input = new FileInputStream( archivo );
             datos.load( input );
 
-            //Obtiene el n�mero de pel�culas
+            //Obtiene el número de películas
             peliculas = Integer.parseInt( datos.getProperty( "total.peliculas" ) );
 
             for( int i = 1; i <= peliculas; i++ )
             {
                 dato = "pelicula" + i + ".nombre";
-                //Carga una pel�cula
+                //Carga una película
                 titulo = datos.getProperty( dato );
                 if( titulo == null )
                 {
@@ -115,10 +115,10 @@ public class VideoTienda
     /**
      * Afilia un cliente a la videotienda. <br>
      * <b>post: </b> Se crea un nuevo cliente y se agrega a la lista de clientes de la videotienda.
-     * @param cedula C�dula del cliente a afiliar. cedula != null.
+     * @param cedula Cédula del cliente a afiliar. cedula != null.
      * @param nombre Nombre del cliente a afiliar. nombre != null.
-     * @param direccion Direcci�n del cliente a afiliar. direccion != null.
-     * @throws Exception Si la c�dula del cliente ya est� registrada en la videotienda.
+     * @param direccion Dirección del cliente a afiliar. direccion != null.
+     * @throws Exception Si la cédula del cliente ya está registrada en la videotienda.
      */
     public void afiliarCliente( String cedula, String nombre, String direccion ) throws Exception
     {
@@ -126,9 +126,9 @@ public class VideoTienda
     }
     
     /**
-     * Busca el cliente dada la c�dula.
-     * @param cedula C�dula del cliente. cedula != null.
-     * @return el cliente correspondiente a la c�dula, o null si no hay un cliente con la c�dula dada.
+     * Busca el cliente dada la cédula.
+     * @param cedula Cédula del cliente. cedula != null.
+     * @return el cliente correspondiente a la cédula, o null si no hay un cliente con la cédula dada.
      */
     public Cliente buscarCliente( String cedula )
     {
@@ -145,8 +145,8 @@ public class VideoTienda
     
     /**
      * Adiciona el monto dado al saldo disponible del cliente. <br>
-     * <b>post: </b> el saldo del cliente identificado con la c�dula se increment� con el monto dado. <br>
-     * @param cedula C�dula del cliente. cedula != null.
+     * <b>post: </b> el saldo del cliente identificado con la cédula se incrementá con el monto dado. <br>
+     * @param cedula Cédula del cliente. cedula != null.
      * @param monto Cantidad de dinero a adicionar en la cuenta. monto > 0.
      * @throws Exception Si el cliente no existe.
      * @throws Exception Si la recarga de saldo es menor que 0.
@@ -157,12 +157,12 @@ public class VideoTienda
     }
 
     /**
-     * Alquila una pel�cula a un cliente. <br>
-     * <b>post: </b> si hay copias disponibles, alquila una copia de la pel�cula, adicion�ndola a la lista de alquiladas del cliente y de la videotienda.
-     * @param titulo T�tulo de la pel�cula. titulo != null.
-     * @param cedula C�dula del cliente. cedula != null.
-     * @return n�mero de copia alquilada.
-     * @throws Exception Si la pel�cula no existe.
+     * Alquila una película a un cliente. <br>
+     * <b>post: </b> si hay copias disponibles, alquila una copia de la película, adicionándola a la lista de alquiladas del cliente y de la videotienda.
+     * @param titulo Título de la película. titulo != null.
+     * @param cedula Cédula del cliente. cedula != null.
+     * @return Número de copia alquilada.
+     * @throws Exception Si la película no existe.
      * @throws Exception Si el cliente no existe.
      * @throws Exception Si no hay copias disponibles.
      * @throws Exception Si el saldo del cliente no es suficiente para el alquiler.
@@ -173,11 +173,11 @@ public class VideoTienda
     }
 
     /**
-     * Devuelve a la videotienda una copia alquilada por el cliente identificado con la c�dula dada. <br>
-     * <b>post: </b> Si la copia est� alquilada por el cliente, la copia se deja disponible, y el cliente ya no la tiene entre sus prestadas.
-     * @param titulo T�tulo de la pel�cula. titulo != null.
-     * @param numeroCopia N�mero de copia a devolver.
-     * @param cedula C�dula del cliente. cedula != null.
+     * Devuelve a la videotienda una copia alquilada por el cliente identificado con la cédula dada. <br>
+     * <b>post: </b> Si la copia está alquilada por el cliente, la copia se deja disponible, y el cliente ya no la tiene entre sus prestadas.
+     * @param titulo Título de la película. titulo != null.
+     * @param numeroCopia Número de copia a devolver.
+     * @param cedula Cédula del cliente. cedula != null.
      * @throws Exception Si el cliente no existe.
      * @throws Exception Si el cliente no tiene la copia alquilada.
      */
@@ -213,8 +213,8 @@ public class VideoTienda
 	}
     
     /**
-     * Retorna el cat�logo de pel�culas de la videotienda
-     * @return lista de pel�culas existentes. lista != null.
+     * Retorna el catálogo de películas de la videotienda
+     * @return lista de películas existentes. lista != null.
      */
     public ArrayList<Pelicula> darCatalogo() 
     {
@@ -222,12 +222,12 @@ public class VideoTienda
 	}
 
     //-----------------------------------------------------------------
-    // Puntos de Extensi�n
+    // Puntos de Extensión
     //-----------------------------------------------------------------
 
     /**
-     * M�todo para la extensi�n 1
-     * @return Respuesta de la extensi�n 1
+     * Método para la extensión 1
+     * @return Respuesta de la extensión 1
      */
     public String metodo1( )
     {
@@ -235,8 +235,8 @@ public class VideoTienda
     }
 
     /**
-     * M�todo para la extensi�n 2
-     * @return Respuesta de la extensi�n 2
+     * Método para la extensión 2
+     * @return Respuesta de la extensión 2
      */
     public String metodo2( )
     {
