@@ -35,13 +35,13 @@ public class VideoTienda
     /**
      * Clientes
      */
-    private ArrayList clientes;
+    private ArrayList<Cliente> clientes;
     //TODO declare el atributo
 
     /**
      * Cat�logo de pel�culas
      */
-    private ArrayList catalogo;
+    private ArrayList<Pelicula> catalogo;
     //TODO declare el atributo
     
     //-----------------------------------------------------------------
@@ -207,21 +207,20 @@ public class VideoTienda
      * Retorna la lista de clientes de la videotienda
      * @return ArrayList la lista de clientes
      */
-    public ArrayList darListaClientes()
+    public ArrayList<Cliente> darListaClientes()
 	{
-    //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
+    	return clientes;
 	}
     
     /**
      * Retorna el cat�logo de pel�culas de la videotienda
      * @return lista de pel�culas existentes. lista != null.
      */
-    public ArrayList darCatalogo() 
+    public ArrayList<Pelicula> darCatalogo() 
     {
-    	
+    	return catalogo;
+	}
 
-    //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
-    }
     //-----------------------------------------------------------------
     // Puntos de Extensi�n
     //-----------------------------------------------------------------
