@@ -124,6 +124,10 @@ public class VideoTienda
     public void afiliarCliente( String cedula, String nombre, String direccion ) throws Exception
     {
     	//TODO implementar
+    	
+    	retorn cliente;
+    	
+    	
     }
     
     /**
