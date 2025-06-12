@@ -50,5 +50,66 @@ public class Cliente
 	}
 	
 	
-
+	//-----------------------------------------------------------------
+	// M��todos
+	//-----------------------------------------------------------------
+	
+	public String darCedula() 
+	{
+		
+	}
+	
+	
+	public String darNombre() 
+	{
+		
+	}
+	
+	
+	public String darDireccion() 
+	{
+		
+	}
+	
+	
+	public void alquilarCopia(Copia copia) 
+	{
+		
+	}
+	
+	
+	public void cargarSaldo(int monto) 
+	{
+		
+	}
+	
+	
+	public void descargarSaldo(int monto) 
+	{
+		
+	}
+	
+	
+	public int darNumeroAlquiladas() 
+	{
+		
+	}
+	
+	
+	public ArrayList<Copia> darAlquiladas() 
+	{
+		
+	}
+	
+	
+	public Copia buscarPeliculaAlquilada(String pelicula, int codigo) 
+	{
+		
+	}
+	
+	
+	public void devolverCopia(String pelicula, int codigo) 
+	{
+		
+	}
 }
