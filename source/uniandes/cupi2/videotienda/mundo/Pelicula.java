@@ -105,7 +105,22 @@ public class Pelicula
      */
     public void devolverCopia(int codigoCopia) 
     {
+    	Copia aDevolver = null;
     	
+    	for(int i = 0; i < prestadas.size() && aDevolver == null; i++) 
+    	{
+    		Copia actual = (Copia)prestadas.get(i);
+    		if(actual.darCodigo() == codigoCopia) 
+    		{
+    			aDevolver = actual;
+    			prestadas.remove(i);
+    		}
+    	}
+    	
+    	if(aDevolver == null)
+    		throw new Exception("La copia " + codigoCopia + " no esta prestada");
+    	
+    	disponibles.add(aDevolver);
     }
      //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
 
