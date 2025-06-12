@@ -100,7 +100,7 @@ public class Cliente
 	
 	public int darNumeroAlquiladas() 
 	{
-		
+		return alquiladas.size();
 	}
 	
 	
