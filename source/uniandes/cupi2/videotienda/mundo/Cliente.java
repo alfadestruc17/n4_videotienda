@@ -125,6 +125,10 @@ public class Cliente
 	
 	public void devolverCopia(String pelicula, int codigo) 
 	{
-		
+		Copia aDevolver = buscarPeliculaAlquilada(pelicula, codigo);
+		if(aDevolver != null) 
+		{
+			alquiladas.remove(aDevolver);
+		}
 	}
 }
