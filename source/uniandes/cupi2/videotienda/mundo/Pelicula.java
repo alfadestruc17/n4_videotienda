@@ -57,6 +57,10 @@ public class Pelicula
     public Pelicula( String unTitulo )
     {
     	//TODO implementar inicializando los atributos
+    	titulo = unTitulo;
+    	disponibles = new ArrayList<Copia>( );
+		prestadas = new ArrayList<Copia>( );
+		codigoSiguienteCopia = 1;
     }
 
     //-----------------------------------------------------------------
