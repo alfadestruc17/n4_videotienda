@@ -80,7 +80,7 @@ public class Cliente
 	
 	public void alquilarCopia(Copia copia) 
 	{
-		
+		alquiladas.add(copia);
 	}
 	
 	
