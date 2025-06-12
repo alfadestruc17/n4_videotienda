@@ -34,6 +34,8 @@ public class Cliente
 	private String direccion;
 	
 	private int saldo;
+	
+	private ArrayList<Copia> alquiladas;
 
 	//-----------------------------------------------------------------
 	// Constructores
