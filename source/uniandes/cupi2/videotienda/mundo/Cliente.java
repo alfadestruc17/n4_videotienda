@@ -74,7 +74,7 @@ public class Cliente
 	
 	public String darDireccion() 
 	{
-		
+		return direccion;
 	}
 	
 	
