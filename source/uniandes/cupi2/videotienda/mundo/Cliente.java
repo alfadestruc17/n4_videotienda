@@ -60,9 +60,15 @@ public class Cliente
 	}
 	
 	
+	public int darSaldo() 
+	{
+		return saldo;
+	}
+	
+	
 	public String darNombre() 
 	{
-		
+		return nombre;
 	}
 	
 	
