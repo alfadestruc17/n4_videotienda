@@ -112,7 +112,14 @@ public class Cliente
 	
 	public Copia buscarPeliculaAlquilada(String pelicula, int codigo) 
 	{
-		
+		for(Copia copia : alquiladas) 
+		{
+			if(Copia.darTituloPelicula().equals(pelicula) && copia.darCodigo() == codigo) 
+			{
+				return copia;
+			}
+		}
+		return null;
 	}
 	
 	
