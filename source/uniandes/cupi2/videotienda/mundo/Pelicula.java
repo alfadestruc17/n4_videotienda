@@ -89,6 +89,12 @@ public class Pelicula
     public Copia alquilarCopia( )
     {
     	//TODO implementar. Recuerde retornar lo indicado en la documentaci�n.
+    	if(disponibles.isEmpty())
+    		return null;
+    	
+    	Copia copia = (copia)disponibles.remove(0);
+    	prestadas.add(copia);
+    	return copia;
     }
 
     /**
