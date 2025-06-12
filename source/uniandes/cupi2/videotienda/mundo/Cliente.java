@@ -106,7 +106,7 @@ public class Cliente
 	
 	public ArrayList<Copia> darAlquiladas() 
 	{
-		
+		return alquiladas;
 	}
 	
 	
