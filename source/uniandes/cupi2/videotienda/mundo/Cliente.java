@@ -56,7 +56,7 @@ public class Cliente
 	
 	public String darCedula() 
 	{
-		
+		return cedula;
 	}
 	
 	
