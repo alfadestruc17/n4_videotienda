@@ -35,7 +35,7 @@ public class Cliente
 	
 	private int saldo;
 	
-	private ArrayList<Copia> alquiladas;
+	private ArrayList alquiladas;
 
 	//-----------------------------------------------------------------
 	// Constructores
@@ -48,7 +48,7 @@ public class Cliente
 		nombre = elNombre;
 		direccion = laDireccion;
 		saldo = 0;
-		alquiladas = new ArrayList<Copia>();
+		alquiladas = new ArrayList();
 	}
 	
 	
@@ -104,7 +104,7 @@ public class Cliente
 	}
 	
 	
-	public ArrayList<Copia> darAlquiladas() 
+	public ArrayList darAlquiladas() 
 	{
 		return alquiladas;
 	}
