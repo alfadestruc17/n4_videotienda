@@ -139,7 +139,7 @@ public class Pelicula
      */
     public int darTotalCopias() 
     {
-    	
+    	return disponibles.size() + prestadas.size();
     }
     //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
 
