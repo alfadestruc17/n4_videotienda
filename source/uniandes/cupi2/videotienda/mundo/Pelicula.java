@@ -149,7 +149,7 @@ public class Pelicula
      */
     public int darNumeroDisponibles() 
     {
-    	
+    	return disponibles.size();
     }
     //TODO Definir la signatura del m�todo de acuerdo a la documentaci�n e implementarlo.
 }
