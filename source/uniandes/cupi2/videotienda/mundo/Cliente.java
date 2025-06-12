@@ -88,7 +88,7 @@ public class Cliente
 	
 	public void cargarSaldo(int monto) 
 	{
-		
+		saldo += monto;
 	}
 	
 	
