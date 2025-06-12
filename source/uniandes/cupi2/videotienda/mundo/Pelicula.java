@@ -75,6 +75,10 @@ public class Pelicula
     public int agregarCopia( )
     {
     	//TODO implementar. Recuerde retornar lo indicado en la documentaci�n. 
+    	Copia nuevaCopia = new Copia(titulo, codigoSiguienteCopia);
+    	disponibles.add(nuevaCopia);
+    	codigoSiguienteCopia++;
+    	return nuevaCopia.darCodigo();
     }
 
     /**
