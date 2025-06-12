@@ -42,7 +42,11 @@ public class Cliente
 	
 	public Cliente( String laCedula, String elNombre, String laDireccion )
 	{
-		
+		cedula = laCedula;
+		nombre = elNombre;
+		direccion = laDireccion;
+		saldo = 0;
+		alquiladas = new ArrayList<Copia>();
 	}
 	
 	
