@@ -94,7 +94,7 @@ public class Cliente
 	
 	public void descargarSaldo(int monto) 
 	{
-		
+		saldo -= monto;
 	}
 	
 	
