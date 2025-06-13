@@ -89,7 +89,7 @@ public class VideoTienda
 
             for( int i = 1; i <= peliculas; i++ )
             {
-                dato = "película" + i + ".nombre";
+                dato = "pelicula" + i + ".nombre";
                 //Carga una película
                 titulo = datos.getProperty( dato );
                 if( titulo == null )
