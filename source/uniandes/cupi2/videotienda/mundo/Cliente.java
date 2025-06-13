@@ -35,7 +35,7 @@ public class Cliente
 	
 	private int saldo;
 	
-	private ArrayList alquiladas;
+	private ArrayList<Copia> alquiladas;
 
 	//-----------------------------------------------------------------
 	// Constructores
@@ -48,7 +48,7 @@ public class Cliente
 		nombre = elNombre;
 		direccion = laDireccion;
 		saldo = 0;
-		alquiladas = new ArrayList();
+		alquiladas = new ArrayList<Copia>();
 	}
 	
 	
@@ -114,7 +114,7 @@ public class Cliente
 	{
 		for(Copia copia : alquiladas) 
 		{
-			if(Copia.darTituloPelicula().equals(pelicula) && copia.darCodigo() == codigo) 
+			if(copia.darTituloPelicula().equals(pelicula) && copia.darCodigo() == codigo) 
 			{
 				return copia;
 			}
