@@ -76,7 +76,7 @@ public class PanelPeliculas extends JPanel implements ActionListener
     {
         ventanaPrincipal = ventana;
 
-        setBorder( BorderFactory.createTitledBorder( "Cat�logo de Pel�culas" ) );
+        setBorder( BorderFactory.createTitledBorder( "Catálogo de Películas" ) );
         setLayout( new BorderLayout( ) );
 
         listaPeliculas = new JList<String>( );
@@ -145,7 +145,7 @@ public class PanelPeliculas extends JPanel implements ActionListener
         {
             if( titulo == null )
             {
-                JOptionPane.showMessageDialog( this, "Debe seleccionar una pel�cula", "Mostrar Pel�cula", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Debe seleccionar una película", "Mostrar Película", JOptionPane.ERROR_MESSAGE );
                 return;
             }
             ventanaPrincipal.mostrarPelicula( titulo );
@@ -154,7 +154,7 @@ public class PanelPeliculas extends JPanel implements ActionListener
         {
             if( titulo == null )
             {
-                JOptionPane.showMessageDialog( this, "Debe seleccionar una pel�cula", "Agregar Copia Pel�cula", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Debe seleccionar una película", "Agregar Copia Película", JOptionPane.ERROR_MESSAGE );
                 return;
             }
             ventanaPrincipal.agregarCopia( titulo );
