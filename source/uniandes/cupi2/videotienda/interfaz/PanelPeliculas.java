@@ -46,7 +46,6 @@ public class PanelPeliculas extends JPanel implements ActionListener
      */
     private static final String AGREGAR_COPIA = "agregar_copia";
 
-
     //-----------------------------------------------------------------
     // Atributos
     //-----------------------------------------------------------------
@@ -130,7 +129,7 @@ public class PanelPeliculas extends JPanel implements ActionListener
         int p = listaPeliculas.getSelectedIndex( );
         if( p < 0 )
             return null;
-        return ( String ) listaPeliculas.getSelectedValue();
+        return ( String )listaPeliculas.getSelectedValue( );
     }
 
     /**
