@@ -103,7 +103,7 @@ public class Pelicula
      * @param codigoCopia C�digo de la copia que se quiere devolver.
      * @throws Exception Si la copia a devolver no est� prestada.
      */
-    public void devolverCopia(int codigoCopia) 
+    public void devolverCopia(int codigoCopia) throws Exception
     {
     	Copia aDevolver = null;
     	
