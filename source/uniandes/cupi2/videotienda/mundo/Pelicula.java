@@ -33,12 +33,12 @@ public class Pelicula
     /**
      * Lista de copias disponibles
      */
-    private ArrayList disponibles;
+    private ArrayList<Copia> disponibles;
 
     /**
      * Lista de copias prestadas
      */
-    private ArrayList prestadas;
+    private ArrayList<Copia> prestadas;
 
     /**
      * N�mero de la siguiente copia a adicionar

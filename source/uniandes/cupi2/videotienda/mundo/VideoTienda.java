@@ -52,7 +52,7 @@ public class VideoTienda
      */
     public VideoTienda( int unaTarifa )
     {
-    	unaTarifa = tarifaDiaria;
+    	tarifaDiaria = unaTarifa;
 		clientes = new ArrayList<Cliente>( );
 		catalogo = new ArrayList<Pelicula>( );
 		
@@ -89,7 +89,7 @@ public class VideoTienda
 
             for( int i = 1; i <= peliculas; i++ )
             {
-                dato = "película" + i + ".nombre";
+                dato = "pelicula" + i + ".nombre";
                 //Carga una película
                 titulo = datos.getProperty( dato );
                 if( titulo == null )
@@ -97,7 +97,7 @@ public class VideoTienda
                     throw new Exception( "Falta definir la propiedad " + dato );
                 }
 
-                copias = Integer.parseInt( datos.getProperty( "película" + i + ".copias" ) );
+                copias = Integer.parseInt( datos.getProperty( "pelicula" + i + ".copias" ) );
                 pel = new Pelicula( titulo );
                 for( int j = 1; j <= copias; j++ )
                 {
@@ -251,7 +251,7 @@ public class VideoTienda
     /**
      * Agrega una copia de la película al catálogo de películas. <br>
      */
-    public void agergarCopiaPelicula(String titulo)
+    public void agregarCopiaPelicula(String titulo)
     {
     	//TODO implementar
     	Pelicula pelicula = buscarPelicula(titulo);
