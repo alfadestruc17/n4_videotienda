@@ -152,6 +152,12 @@ public class VideoTienda
     public Pelicula buscarPelicula( String titulo )
 	{
 		//TODO implementar
+    	for (Pelicula pelicula : catalogo) {
+    		if (pelicula.darTitulo().equalsIgnoreCase(titulo)) {
+    			return pelicula;
+			}
+		}
+    	return null;
 	}
     
     /**
