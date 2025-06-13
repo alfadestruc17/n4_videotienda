@@ -92,7 +92,7 @@ public class Pelicula
     	if(disponibles.isEmpty())
     		return null;
     	
-    	Copia copia = (copia)disponibles.remove(0);
+    	Copia copia = (Copia)disponibles.remove(0);
     	prestadas.add(copia);
     	return copia;
     }
@@ -103,7 +103,7 @@ public class Pelicula
      * @param codigoCopia C�digo de la copia que se quiere devolver.
      * @throws Exception Si la copia a devolver no est� prestada.
      */
-    public void devolverCopia(int codigoCopia) 
+    public void devolverCopia(int codigoCopia) throws Exception
     {
     	Copia aDevolver = null;
     	
