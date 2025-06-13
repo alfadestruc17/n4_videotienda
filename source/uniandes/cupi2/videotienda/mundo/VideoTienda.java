@@ -165,6 +165,14 @@ public class VideoTienda
     public void cargarSaldoCliente( String cedula, int monto ) throws Exception
     {
     	//TODO implementar
+    	if (monto <= 0) {
+    		throw new Exception("El monto a adicionar debe ser mayor que 0.");
+    	}
+    	Cliente cliente = buscarCliente(cedula);
+    	if (cliente == null) {
+    		throw new Exception("El cliente con cédula " + cedula + " no está afiliado.");
+    	}
+    	cliente.cargarSaldo(monto);
     }
 
     /**
