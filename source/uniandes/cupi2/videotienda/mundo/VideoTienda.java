@@ -124,8 +124,13 @@ public class VideoTienda
     public void afiliarCliente( String cedula, String nombre, String direccion ) throws Exception
     {
     	//TODO implementar
-    	
-    	retorn cliente;
+    			if (buscarCliente(cedula) != null) {
+			throw new Exception("El cliente con cédula " + cedula + " ya está afiliado.");
+		}
+		
+		Cliente nuevoCliente = new Cliente(cedula, nombre, direccion);
+		clientes.add(nuevoCliente);
+		
     	
     	
     }
@@ -138,6 +143,7 @@ public class VideoTienda
     public Cliente buscarCliente( String cedula )
     {
     	//TODO implementar
+    	
     }
 
     /**
@@ -189,7 +195,20 @@ public class VideoTienda
     public void devolverCopia( String titulo, int numeroCopia, String cedula ) throws Exception
     {
     	//TODO implementar
-
+    	Cliente cliente = buscarCliente(cedula);
+    	if (cliente == null) {
+			throw new Exception("El cliente con cédula " + cedula + " no está afiliado.");
+		}
+    	Pelicula pelicula = buscarPelicula(titulo);
+		if (pelicula == null) {
+			throw new Exception("La película " + titulo + " no existe.");
+		}
+		Copia copia = cliente.buscarPeliculaAlquilada(titulo, numeroCopia);
+		if (copia == null) {
+			throw new Exception("El cliente con cédula " + cedula + " no tiene alquilada la copia " + numeroCopia + " de la película " + titulo + ".");
+		}
+		pelicula.devolverCopia(numeroCopia);
+		cliente.devolverCopia(titulo, numeroCopia);
     }
 
     /**
@@ -198,6 +217,10 @@ public class VideoTienda
     public void agergarCopiaPelicula(String titulo)
     {
     	//TODO implementar
+    	Pelicula pelicula = buscarPelicula(titulo);
+    	if (pelicula != null) {
+    		pelicula.agregarCopia();
+    						}
     }
 
     /**
@@ -205,7 +228,10 @@ public class VideoTienda
      */
     public void modificarTarifa(int nuevaTarifa)
     {
-		//TODO implementar
+				//TODO implementar
+		if (nuevaTarifa <= 0) {
+			tarifaDiaria = nuevaTarifa;
+		}
 	}
     
     /**
