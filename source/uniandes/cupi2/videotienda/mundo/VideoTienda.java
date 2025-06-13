@@ -181,6 +181,24 @@ public class VideoTienda
     public int alquilarPelicula( String titulo, String cedula ) throws Exception
     {
     	//TODO implementar
+    	Pelicula pelicula = buscarPelicula(titulo);
+    	if (pelicula == null) {
+    		throw new Exception("La película " + titulo + " no existe.");
+    	}
+    	Cliente cliente = buscarCliente(cedula);
+    	if (cliente == null) {
+			throw new Exception("El cliente con cédula " + cedula + " no está afiliado.");
+		}
+    	if (pelicula.darNumeroDisponibles() == 0) {
+    		throw new Exception("No hay copias disponibles de la película " + titulo + ".");
+    	}
+    	if (cliente.darSaldo() < tarifaDiaria) {
+			throw new Exception("El saldo del cliente con cédula " + cedula + " no es suficiente para alquilar la película " + titulo + ".");
+		}
+    	Copia copia = pelicula.alquilarCopia();
+    	cliente.alquilarCopia(copia);
+    	cliente.descargarSaldo(tarifaDiaria);
+    	return copia.darCodigo();
     }
 
     /**
