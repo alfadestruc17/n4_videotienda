@@ -52,7 +52,7 @@ public class VideoTienda
      */
     public VideoTienda( int unaTarifa )
     {
-    	unaTarifa = tarifaDiaria;
+    	tarifaDiaria = unaTarifa;
 		clientes = new ArrayList<Cliente>( );
 		catalogo = new ArrayList<Pelicula>( );
 		
@@ -97,7 +97,7 @@ public class VideoTienda
                     throw new Exception( "Falta definir la propiedad " + dato );
                 }
 
-                copias = Integer.parseInt( datos.getProperty( "película" + i + ".copias" ) );
+                copias = Integer.parseInt( datos.getProperty( "pelicula" + i + ".copias" ) );
                 pel = new Pelicula( titulo );
                 for( int j = 1; j <= copias; j++ )
                 {
