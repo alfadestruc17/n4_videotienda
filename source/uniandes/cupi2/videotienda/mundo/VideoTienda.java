@@ -143,7 +143,12 @@ public class VideoTienda
     public Cliente buscarCliente( String cedula )
     {
     	//TODO implementar
-    	
+    	for (Cliente cliente : clientes) {
+			if (cliente.darCedula().equalsIgnoreCase(cedula)) {
+				return cliente;
+				}
+			}
+		return null;
     }
 
     /**
