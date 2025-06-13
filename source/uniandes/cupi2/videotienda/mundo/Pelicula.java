@@ -92,7 +92,7 @@ public class Pelicula
     	if(disponibles.isEmpty())
     		return null;
     	
-    	Copia copia = (copia)disponibles.remove(0);
+    	Copia copia = (Copia)disponibles.remove(0);
     	prestadas.add(copia);
     	return copia;
     }
