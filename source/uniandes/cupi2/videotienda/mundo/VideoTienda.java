@@ -251,7 +251,7 @@ public class VideoTienda
     /**
      * Agrega una copia de la película al catálogo de películas. <br>
      */
-    public void agergarCopiaPelicula(String titulo)
+    public void agregarCopiaPelicula(String titulo)
     {
     	//TODO implementar
     	Pelicula pelicula = buscarPelicula(titulo);
